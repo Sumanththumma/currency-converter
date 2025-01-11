@@ -5,6 +5,10 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background:rgba(29, 29, 115, 0.658);
 }
 .nav{
@@ -14,9 +18,13 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0.8rem 2rem;
-    background:rgba(183, 183, 230, 0.658);
+    background:rgba(74, 74, 134, 0.658);
     border-radius: 8px;
     box-shadow: 2px 4px 3px 1px rgba(88, 88, 88, 0.315);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 95%;
 }
 .navlinks{
     display: flex;
@@ -25,10 +33,96 @@ body{
 }
 #navbar-one{
     letter-spacing: -3px;
+    color: rgb(210, 209, 157);
 }
 .navlinks a{
     text-decoration: none;
     color:black;
     letter-spacing: -2px;
-    color: rgb(72, 71, 71);
+    color:  rgb(210, 209, 157);
+    transition: ease-in-out;
+    transition-duration: 300ms;
+}
+.navlinks a:hover{
+    color: black;
+}
+#darkmode-logo{
+    width: 1.5rem;
+    height:1.2rem;
+    display: inline-block;
+    transform-origin: center;
+
+}
+#darkmode-logo:hover {
+    animation: rotation 1.5s ease-in-out 0ms 1 forwards;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+ 
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(40deg);
+    }
+}
+/* end of header*/
+#base-currency-box{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+#base-currency-box input{
+    height:2.5rem;
+    border: none;
+    font-size: x-large;
+    padding-left: 1rem;
+    width:10rem;
+}
+#base-currency-box input:focus{
+    outline: rgb(63, 63, 186);
+}
+#base-currency-box select{
+    height:2.5rem;
+    border:none;
+    font-weight: bold;
+}
+#base-currency-box select:focus{
+    outline: rgb(63, 63, 186);
+}
+#converted-currency-box{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+#converted-currency-box input{
+    height:2.5rem;
+    border: none;
+    font-size: x-large;
+    padding-left: 1rem;
+    width:10rem;
+}
+#converted-currency-box input:focus{
+    outline: rgb(63, 63, 186);
+}
+#converted-currency-box select{
+    height:2.5rem;
+    border:none;
+    font-weight: bold;
+}
+#converted-currency-box select:focus{
+    outline: rgb(63, 63, 186);
+}
+
+#main-one{
+    display: flex;
+    flex-direction: column;
+    gap:0.7rem;
 }
