@@ -2,24 +2,34 @@
     padding: 0;
     margin:0;
     box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
-
-
-
+body{
+    background:rgba(29, 29, 115, 0.658);
+}
 .nav{
-   
+    position: sticky;
+    margin:0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.8rem 2rem;
-    background:rgba(183, 183, 230, 0.658) 
+    background:rgba(183, 183, 230, 0.658);
+    border-radius: 8px;
+    box-shadow: 2px 4px 3px 1px rgba(88, 88, 88, 0.315);
 }
 .navlinks{
     display: flex;
     gap: 2rem;
     list-style-type: none;
 }
+#navbar-one{
+    letter-spacing: -3px;
+
+}
 .navlinks a{
     text-decoration: none;
-    color:black
+    color:black;
+    letter-spacing: -2px;
+    color: rgb(72, 71, 71);
 }
