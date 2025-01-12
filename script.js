@@ -5,7 +5,7 @@ const baseCurrency = document.getElementById('base-currency');
 const convertedCurrency = document.getElementById('converted-currency');
 const baseInput = document.getElementById('baseinput');
 const convertedInput = document.getElementById('convertedinput')
-
+let conversionRate = 0.012;
 const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((data)=>{
     
     let clutter = Object.keys(data.conversion_rates);
@@ -22,10 +22,17 @@ const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((
         newOption.innerText = curr;
         convertedCurrency.appendChild(newOption);
     })
+})
 
-    baseInput.addEventListener('input',()=>{
-        console.log(baseInput.value);
-    })
+baseCurrency.addEventListener('change',()=>{
+    base = baseCurrency.value;
+})
+
+
+baseInput.addEventListener('input',()=>{
+    convertedInput.value = (baseInput.value * conversionRate).toFixed(2);
     
-
+})
+convertedInput.addEventListener('input',()=>{
+    baseInput.value = (convertedInput.value/conversionRate).toFixed(2);
 })
