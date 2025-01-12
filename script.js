@@ -3,7 +3,8 @@ let base='USD';
 let URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${base}`;
 const baseCurrency = document.getElementById('base-currency');
 const convertedCurrency = document.getElementById('converted-currency');
-
+const baseInput = document.getElementById('baseinput');
+const convertedInput = document.getElementById('convertedinput')
 
 const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((data)=>{
     
@@ -22,8 +23,9 @@ const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((
         convertedCurrency.appendChild(newOption);
     })
 
-    baseCurrency.addEventListener('change',()=>{
-        
+    baseInput.addEventListener('input',()=>{
+        console.log(baseInput.value);
     })
+    
 
 })
