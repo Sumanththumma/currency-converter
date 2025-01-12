@@ -190,6 +190,10 @@ footer h3{
     align-items: center;
     justify-content: center;
 }
+.socials a{
+    text-decoration: none;
+    color: #000;
+}
 .socials #github{
    font-size: x-large;
 }
