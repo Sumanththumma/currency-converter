@@ -29,6 +29,7 @@ const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((
 
 baseCurrency.addEventListener('change',()=>{
     base = baseCurrency.value;
+    console.log(base);
 })
 
 
