@@ -11,38 +11,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="">
-    <nav class="nav">
-        <div id="navbar-one"><h1>Currency Convertor.</h1></div>
-        <div id="navbar-two">
-            <ul class="navlinks">
-                <a href="#"><li>Stats</li></a>
-                <a href="#"><li>Docs</li></a>
-                <a href="#"><li>Contact</li></a>
-                <a href="#"><img id="darkmode-logo" src="./sun-fill.svg"></a>
-            </ul>
-            <div id="burger" class="burger">
-                <i style="color: rgb(210, 209, 157);" class="ri-menu-4-line"></i>
+    <div class="content-container">
+        <nav class="nav">
+            <div id="navbar-one"><h1>Currency Convertor.</h1></div>
+            <div id="navbar-two">
+                <ul class="navlinks">
+                    <a href="#"><li>Stats</li></a>
+                    <a href="#"><li>Docs</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><img id="darkmode-logo" src="./sun-fill.svg"></a>
+                </ul>
+                <div id="burger" class="burger">
+                    <i style="color: rgb(210, 209, 157);" class="ri-menu-4-line"></i>
+                </div>
             </div>
+        </nav>
+        <div class="main">
+           <div id="main-one">
+            <div id="base-currency-box">
+                <input type="text" id="baseinput">
+                <select name="base-currency" id="base-currency">
+                  
+                </select>
+            </div>
+            <div id="converted-currency-box">
+                <input type="text" id="convertedinput">
+                <select name="converted-currency" id="converted-currency">
+                   
+                </select>
+            </div>
+           </div>
+           <div id="main-two">
+            <img src="./exchange.svg" alt="exchange_symbol">
+           </div>
         </div>
-    </nav>
-    <div class="main">
-       <div id="main-one">
-        <div id="base-currency-box">
-            <input type="text" id="baseinput">
-            <select name="base-currency" id="base-currency">
-              
-            </select>
+    </div>
+    <div class="hidden" id="hamburger-container">
+        <div class="cross"><h1 id="cross">X</h1></div>
+        <div class="navlist">
+            <div class="navlist-elems"><h1>Stats</h1></div>
+            <div class="navlist-elems"><h1>Docs</h1></div>
+            <div class="navlist-elems"><h1>Contact</h1></div>
+            <div class="navlist-elems"><h1>Dark mode</h1></div>
         </div>
-        <div id="converted-currency-box">
-            <input type="text" id="convertedinput">
-            <select name="converted-currency" id="converted-currency">
-               
-            </select>
-        </div>
-       </div>
-       <div id="main-two">
-        <img src="./exchange.svg" alt="exchange_symbol">
-       </div>
     </div>
     <script src="./script.js"></script>
 </body>

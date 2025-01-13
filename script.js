@@ -5,6 +5,8 @@ const baseCurrency = document.getElementById('base-currency');
 const convertedCurrency = document.getElementById('converted-currency');
 const baseInput = document.getElementById('baseinput');
 const convertedInput = document.getElementById('convertedinput')
+const burgerIcon = document.getElementById('burger');
+const hamburgerMenu = document.querySelector('#hamburger-container');
 let conversionRate = 0.012;
 const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((data)=>{
     
@@ -35,4 +37,7 @@ baseInput.addEventListener('input',()=>{
 })
 convertedInput.addEventListener('input',()=>{
     baseInput.value = (convertedInput.value/conversionRate).toFixed(2);
+})
+burgerIcon.addEventListener('click',()=>{
+    hamburgerMenu.classList.remove('hidden');
 })
