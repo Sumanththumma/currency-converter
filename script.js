@@ -7,6 +7,7 @@ const baseInput = document.getElementById('baseinput');
 const convertedInput = document.getElementById('convertedinput')
 const burgerIcon = document.getElementById('burger');
 const hamburgerMenu = document.querySelector('#hamburger-container');
+const crossIcon = document.getElementById('cross');
 let conversionRate = 0.012;
 const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((data)=>{
     
@@ -40,4 +41,7 @@ convertedInput.addEventListener('input',()=>{
 })
 burgerIcon.addEventListener('click',()=>{
     hamburgerMenu.classList.remove('hidden');
+})
+crossIcon.addEventListener('click',()=>{
+    hamburgerMenu.classList.add('hidden');
 })

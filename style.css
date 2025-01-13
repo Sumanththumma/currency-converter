@@ -3,7 +3,6 @@
     margin:0;
     box-sizing: border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    cursor: cell;
 }
 body{
     display: flex;
@@ -67,6 +66,8 @@ body{
 }
 .burger{
     display: none;
+    font-size: x-large;
+    cursor: pointer;
 }
 
 @keyframes rotation {
@@ -227,11 +228,17 @@ font-size: x-large;
 .navlist-elems{
     border-bottom: 2px solid rgb(210, 209, 157);
 }
+.navlist-elems a{
+    text-decoration: none;
+    color: rgb(210, 209, 157);
+    cursor: pointer;
+}
 #cross{
     padding-top: 1rem;
     padding-right: 2rem;
     color: rgb(210, 209, 157);
     text-align: end;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar{
