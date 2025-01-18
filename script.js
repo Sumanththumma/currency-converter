@@ -30,8 +30,10 @@ const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((
 baseCurrency.addEventListener('change',()=>{
     base = baseCurrency.value;
     console.log(base);
-    const  setBase = fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${base}`).then((response)=>response.json()).then((data)=>{
-        
+    
+    const setBase = fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${base}`).then((response)=>response.json()).then((data)=>{
+        conversionRate =  data.conversion_rates.convertedCurrency;
+        console.log(conversionRate);
     })
 })
 
