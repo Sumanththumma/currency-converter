@@ -8,9 +8,9 @@ const convertedInput = document.getElementById('convertedinput')
 const burgerIcon = document.getElementById('burger');
 const hamburgerMenu = document.querySelector('#hamburger-container');
 const crossIcon = document.getElementById('cross');
-let conversionRate = 0.012;
+let conversionRate = 1;
 const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((data)=>{
-    
+    console.log(data)
     let clutter = Object.keys(data.conversion_rates);
     clutter.forEach((curr)=>{
         let newOption = document.createElement('option');
@@ -30,8 +30,10 @@ const fetchCurrencies = fetch(`${URL}`).then((Response)=>Response.json()).then((
 baseCurrency.addEventListener('change',()=>{
     base = baseCurrency.value;
     console.log(base);
+    const  setBase = fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${base}`).then((response)=>response.json()).then((data)=>{
+        
+    })
 })
-
 
 baseInput.addEventListener('input',()=>{
     convertedInput.value = (baseInput.value * conversionRate).toFixed(2);
